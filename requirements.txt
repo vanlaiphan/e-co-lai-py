@@ -1,0 +1,9 @@
+websocket-client
+fastapi
+torch
+requests
+aiohttp
+pytz
+validators
+pynvml
+uvicorn
