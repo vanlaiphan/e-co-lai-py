@@ -33,6 +33,7 @@ async def hello():
 @app.post("/outfit_swap/")
 async def outfit_swap_(item: OutfitSwapItem):
     loop = asyncio.get_event_loop()
+    print(f"Received request with: {item.url_image_human}, {item.url_image_outfit}, {item.user_prompt}")
     images = await loop.run_in_executor(None, outfit_swap.swap, item.url_image_human, item.url_image_outfit, item.user_prompt)
 
     image_results = []

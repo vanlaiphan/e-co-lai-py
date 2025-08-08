@@ -17,7 +17,10 @@ prompt_save = json.loads(prompt_text)
 
 
 def swap(url_image_human, url_image_outfit, user_prompt):
-    server_address = "213.173.108.86:10589"    
+    if user_prompt == "":
+        user_prompt = "Hãy để người trong ảnh mặc áo. Giữ nguyên các nhân vật và trang phục, không thay đổi gì cả."
+
+    server_address = "213.173.108.86:10196"    
 
     prompt = prompt_save
 
