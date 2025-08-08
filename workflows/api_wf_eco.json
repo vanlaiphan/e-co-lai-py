@@ -39,7 +39,7 @@
   },
   "31": {
     "inputs": {
-      "seed": 1115200769433302,
+      "seed": 741774466846872,
       "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
@@ -252,6 +252,10 @@
       "image1": [
         "264",
         0
+      ],
+      "image2": [
+        "265",
+        0
       ]
     },
     "class_type": "ImageStitch",
@@ -377,7 +381,7 @@
   },
   "243": {
     "inputs": {
-      "seed": 316165690099405,
+      "seed": 480593403477424,
       "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
@@ -469,6 +473,7 @@
   },
   "250": {
     "inputs": {
+      "text_0": "Let the man in the photo wear.Maintain the characters and costumes, not changing at all.",
       "text": [
         "249",
         0

@@ -10,7 +10,7 @@ import time
 import socket
 
 
-with open('workflows/api_wf_e.json', encoding='utf-8') as f:
+with open('workflows/api_wf_eco.json', encoding='utf-8') as f:
     prompt_text = f.read()
 
 prompt_save = json.loads(prompt_text)
