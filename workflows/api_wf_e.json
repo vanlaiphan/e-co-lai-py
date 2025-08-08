@@ -5,6 +5,12 @@
         "189",
         0
       ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
       "clip": [
         "38",
         0
@@ -33,14 +39,14 @@
   },
   "31": {
     "inputs": {
-      "seed": 1067060646988048,
+      "seed": 1115200769433302,
       "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
       "denoise": 1,
       "model": [
-        "197",
+        "37",
         0
       ],
       "positive": [
@@ -108,7 +114,7 @@
   "42": {
     "inputs": {
       "image": [
-        "257",
+        "265",
         0
       ]
     },
@@ -183,7 +189,13 @@
       "text": [
         "196",
         0
-      ]
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
     },
     "class_type": "GoogleTranslateTextNode",
     "_meta": {
@@ -192,11 +204,11 @@
   },
   "190": {
     "inputs": {
+      "text_0": "Remove the shirt, keep the pants",
       "text": [
         "189",
         0
-      ],
-      "text2": "Remove clothes"
+      ]
     },
     "class_type": "ShowText|pysssss",
     "_meta": {
@@ -218,25 +230,17 @@
   },
   "196": {
     "inputs": {
-      "text": "Cởi bỏ quần áo"
+      "text": "Cởi bỏ áo, giữ nguyên quần",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
     },
     "class_type": "Text Multiline",
     "_meta": {
       "title": "Text Multiline"
-    }
-  },
-  "197": {
-    "inputs": {
-      "lora_name": "clothes_remover_v1.safetensors",
-      "strength_model": 1,
-      "model": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "LoraLoaderModelOnly",
-    "_meta": {
-      "title": "LoraLoaderModelOnly"
     }
   },
   "205": {
@@ -246,11 +250,7 @@
       "spacing_width": 0,
       "spacing_color": "white",
       "image1": [
-        "258",
-        0
-      ],
-      "image2": [
-        "257",
+        "264",
         0
       ]
     },
@@ -292,33 +292,18 @@
       "title": "Repeat Latent Batch"
     }
   },
-  "235": {
-    "inputs": {
-      "model": "RMBG-2.0",
-      "sensitivity": 1,
-      "process_res": 1024,
-      "mask_blur": 0,
-      "mask_offset": 0,
-      "invert_output": "white",
-      "refine_foreground": false,
-      "background": "default",
-      "background_color": "#222222",
-      "image": [
-        "258",
-        0
-      ]
-    },
-    "class_type": "RMBG",
-    "_meta": {
-      "title": "Remove Background (RMBG)"
-    }
-  },
   "238": {
     "inputs": {
       "text": [
         "249",
         0
       ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
       "clip": [
         "38",
         0
@@ -392,7 +377,7 @@
   },
   "243": {
     "inputs": {
-      "seed": 419904035117974,
+      "seed": 316165690099405,
       "steps": 20,
       "cfg": 1,
       "sampler_name": "euler",
@@ -447,7 +432,13 @@
   },
   "248": {
     "inputs": {
-      "text": "Hãy để người phụ nữ trong ảnh mặc đồ ngủ và ngồi trên tủ. Giữ nguyên các nhân vật và trang phục, không thay đổi gì cả."
+      "text": "Hãy để người đàn ông trong ảnh mặc áo. Giữ nguyên các nhân vật và trang phục, không thay đổi gì cả.",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
     },
     "class_type": "Text Multiline",
     "_meta": {
@@ -463,7 +454,13 @@
       "text": [
         "248",
         0
-      ]
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
     },
     "class_type": "GoogleTranslateTextNode",
     "_meta": {
@@ -475,8 +472,7 @@
       "text": [
         "249",
         0
-      ],
-      "text2": "Let the woman in the picture wearing pajamas and sitting on the closet.Maintain the characters and costumes, not changing at all."
+      ]
     },
     "class_type": "ShowText|pysssss",
     "_meta": {
@@ -494,7 +490,7 @@
         0
       ],
       "image2": [
-        "235",
+        "258",
         0
       ]
     },
@@ -535,7 +531,7 @@
   "254": {
     "inputs": {
       "image": [
-        "257",
+        "42",
         0
       ]
     },
@@ -544,22 +540,45 @@
       "title": "Get Image Size & Count"
     }
   },
-  "257": {
-    "inputs": {
-      "Url": ""
-    },
-    "class_type": "SDVN Load Image Url",
-    "_meta": {
-      "title": "📥 Load Image Url - Nguoi"
-    }
-  },
   "258": {
     "inputs": {
-      "Url": ""
+      "transparency": true,
+      "model": "u2net",
+      "post_processing": false,
+      "only_mask": false,
+      "alpha_matting": false,
+      "alpha_matting_foreground_threshold": 240,
+      "alpha_matting_background_threshold": 10,
+      "alpha_matting_erode_size": 10,
+      "background_color": "none",
+      "images": [
+        "264",
+        0
+      ]
     },
-    "class_type": "SDVN Load Image Url",
+    "class_type": "Image Rembg (Remove Background)",
     "_meta": {
-      "title": "📥 Load Image Url - Trang Phuc"
+      "title": "Image Rembg (Remove Background)"
+    }
+  },
+  "264": {
+    "inputs": {
+      "url": "",
+      "image": "ao-co-djo-sao-vang-viet-nam-1-10_638611468807420567.jpg"
+    },
+    "class_type": "LiamLoadImage",
+    "_meta": {
+      "title": "LiamLoadImage"
+    }
+  },
+  "265": {
+    "inputs": {
+      "url": "",
+      "image": "525588316_1176843474440350_1521280053275780419_n (1).jpg"
+    },
+    "class_type": "LiamLoadImage",
+    "_meta": {
+      "title": "LiamLoadImage"
     }
   }
 }

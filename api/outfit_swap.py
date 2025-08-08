@@ -10,14 +10,14 @@ import time
 import socket
 
 
-with open('workflows/e-commerce-api.json', encoding='utf-8') as f:
+with open('workflows/api_wf_e.json', encoding='utf-8') as f:
     prompt_text = f.read()
 
 prompt_save = json.loads(prompt_text)
 
 
 def swap(url_image_human, url_image_outfit, user_prompt):
-    server_address = "localhost:20218"    
+    server_address = "213.173.108.86:10589"    
 
     prompt = prompt_save
 
@@ -29,8 +29,8 @@ def swap(url_image_human, url_image_outfit, user_prompt):
 
     prompt["248"]["inputs"]["text"] = user_prompt
     
-    prompt["265"]["inputs"]["Url"] = url_image_human
-    prompt["266"]["inputs"]["Url"] = url_image_outfit
+    prompt["265"]["inputs"]["url"] = url_image_human
+    prompt["264"]["inputs"]["url"] = url_image_outfit
 
     client_id = str(uuid.uuid4())
 
